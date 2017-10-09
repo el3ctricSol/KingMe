@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="..\css\jquery-ui.css">
+  <link rel="stylesheet" href="..\css\jquery-ui.structure.css">
+  <link rel="stylesheet" href="..\css\jquery-ui.theme.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="..\js\jquery-ui.js"></script>
+
+  <title>Get Your Quote!</title>
+
+  <style>
+    a {
+      text-decoration: none !important;
+      color: #f5f6f7
+    }
+    button {
+      background: #f6931f;
+      margin-left: 20px;
+    }
+
+    #slider {
+    margin-left: 20px !important;
+    width: 75%;
+    }
+
+    body {
+        font: 20px Montserrat, sans-serif;
+        line-height: 1.8;
+        color: #f5f6f7;
+        background-color: black;
+    }
+    input {
+      margin-left: 10px;
+    }
+    p {font-size: 16px;}
+    .margin {margin-bottom: 20px}
+    .pmargin {margin-left: 50px; margin-right: 50px}
+
+    .bg-1 {
+        background-color: #2A87BC; /* blue */
+        color: #ffffff;
+        padding: 40px 20px 20px 20px;
+        min-height: 1000px;
+    }
+    .bg-2 {
+        background-color: #E48B69; /* peach */
+        color: #ffffff;
+    }
+    .bg-3 {
+        background-color: #2f2f2f; /* Black Gray */
+        padding-right: 20px !important;
+        color: #48c939;            /*bright green*/
+    }
+    .container-fluid {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+    #datefont {
+      color: black;
+    }
+    .navbar-nav li a {
+      color: #48c939 !important;
+    }
+    .navbar-brand {
+      color: #48c939 !important;
+    }
+    .navbar {
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        font-size: 14px;
+        background-color: #2f2f2f !important;
+    }
+    .navbar-default {
+      min-height: 60px;  /*navbar height */
+    }
+    .navbar-nav  li a:hover {
+        color: #000000 !important;
+    }
+    .smallfont {
+      font-size: 12px;
+    }
+    #bluefont {
+      color: blue;
+    }
+
+/*BEGIN tooltip*/
+    .ui-tooltip, .arrow:after {
+    background: #f6931f;
+    border: 2px solid white;
+  }
+  .ui-tooltip {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    font: bold 14px "Helvetica Neue", Sans-Serif;
+    box-shadow: 0 0 7px black;
+  }
+  .arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+    shadow: 0 0 7px black;
+  }
+  .arrow.top {
+    top: -16px;
+    bottom: auto;
+  }
+  .arrow.left {
+    left: 20%;
+  }
+  .arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .arrow.top:after {
+    bottom: -20px;
+    top: auto;
+  }
+  /*END tooltip*/
+
+  </style>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+
+    $( function() {
+    $('#datepicker').datepicker({
+    minDate: "+1w",
+    numberOfMonths: 2,
+    changeMonth: true,
+    changeYear: true
+    });
+  });//END calendar
+
+        $( function() {
+    $( "#slider" ).slider({
+    value:100,
+    min: 50,
+    max: 300,
+    step: 10,
+    slide: function( event, ui ) {
+      $( "#amount" ).val( "$" + ui.value );
+    }
+    });
+    $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
+    } ); //END slider
+
+    $( function() {
+  $( document ).tooltip({
+    position: {
+      my: "center bottom-20",
+      at: "center top",
+      using: function( position, feedback ) {
+        $( this ).css( position );
+        $( "<div>" )
+          .addClass( "arrow" )
+          .addClass( feedback.vertical )
+          .addClass( feedback.horizontal )
+          .appendTo( this );
+      }
+    }
+  });
+} ); //END tooltip
+
+  }); //END document ready
+
+  function quote() {
+    alert("Thank you for your submission! We will contact you via email within 24 hours.");
+} //for quote alert box
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Get Your Quote!</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Assignments<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="..\wk1\wk1.html">Week 1 Page</a></li>
+              <li><a href="..\wk2\wk2.html">Week 2 Page</a></li>
+              <li><a href="..\wk3\wk3.html">Week 3 Page</a></li>
+              <li><a href="..\wk4\wk4.html">Week 4 Page</a></li>
+            </ul>
+          </li>
+          <li><a href="quote.html"><span id="bluefont">Design Quote!</span></a></li>
+          <li><a href="../wk5/sample5-1.html">Newsletter</a></li>
+          <li><a href="../wk3/faq.html">FAQ</a></li>
+        </ul>
+      </div> <!--collapsable navbar parts -->
+     </div>  <!--container -->
+  </nav>
+<div class="bg-1 container">
+  <p>
+    <span class="glyphicon glyphicon-exclamation-sign" title="Most logo jobs require at least a week lead time."></span>
+    Desired Completion Date: <span id="datefont"><input type="text" id="datepicker"></span>
+  </p>
+  <br><br>
+  <p>
+    <span class="glyphicon glyphicon-exclamation-sign" title="Your maximum price will not necessarily be the price you are quoted."></span>
+    <label for="amount">Maximum Price Point ($50 - $300):</label>
+    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; font-size: 30px; background-color: inherit">
+  </p>
+
+  <div id="slider"></div>
+  <br><br>
+  <button onclick="quote()"><a href="../index.html">Submit for Quote</a></button>
+</div>
+
+<!-- Footer -->
+<footer class="bg-3 text-center">
+  <img src="../images/powerup.png" alt="power.up logo" align=right width="50"> <br><br>
+  <p class="smallfont" align=right>created by power.up!</p>
+  <p class="smallfont" align=right>&copy 2017</p>
+</footer>
+</body>
+
+</html>

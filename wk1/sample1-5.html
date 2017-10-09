@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Sample 1-5</title>
+
+<script type="text/javascript">
+  var shoppingCart = []; //create empty array
+  shoppingCart[0] = "Bicycle";
+  shoppingCart[1] = "Kayak";
+  shoppingCart[2] = "TV";
+</script>
+
+</head>
+<body>
+<h2>Shopping Cart Values</h2>
+
+<script type="text/javascript">
+  document.write("<p>The first item is: ");
+  document.write(shoppingCart[0] + "</p>");
+  document.write("<p>The last item is: " + shoppingCart[shoppingCart.length - 1] + "</p>");
+  shoppingCart.unshift("Blu-Ray Player");
+  document.write('<p>Oh someone just added a new item: ' + shoppingCart[0] + '</p>');
+  document.write('<p>Number of Items in Cart: ' + shoppingCart.length + '</p>');
+  document.write('<p>Items in the Cart: ' + shoppingCart + '</p>');
+</script>
+
+</body>
+</html>

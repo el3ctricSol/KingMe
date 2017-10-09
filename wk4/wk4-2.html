@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/lightbox.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
+  <script src="../js/lightbox.js"></script>
+
+  <title>Week 4</title>
+
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+
+  p {font-size: 16px;}
+  .margin {margin-bottom: 20px}
+  .pmargin {margin-left: 50px; margin-right: 50px}
+  .bg-1 {
+      background-color: #2A87BC; /* Teal? */
+      color: #ffffff;
+  }
+  .bg-2 {
+      background-color: #54D6B7; /* Peach */
+      color: #ffffff;
+  }
+  .bg-3 {
+      background-color: #2f2f2f; /* Black Gray */
+      padding-right: 20px !important;
+      color: #48c939;
+  }
+  .bg-4 {
+      background-color: #3636F0; /* Lighter Blue than bg1 */
+      color: #ffffff;
+      padding-top: 1px !important;
+      padding bottom: 1px !important;
+  }
+  .container-fluid {
+      padding: 10px 10px 10px 10px;
+      width: 95%;
+      margin: 0 auto;
+      text-align: center;
+  }
+  .cycle-slideshow {
+    max-width:50%;
+  }
+  .cycle-slideshow img {
+    width: 100%;
+  }
+  .navbar-nav li a {
+    color: #48c939 !important;
+  }
+  .navbar-brand {
+    color: #48c939 !important;
+  }
+  .navbar {
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 15px;
+      background-color: #2f2f2f !important;
+  }
+  .navbar-nav  li a:hover {
+      color: #ffffff !important;
+  }
+  .smallfont {
+    font-size: 12px;
+  }
+  #thumbnails {
+    padding-top: 40px;
+  }
+  #thumbnails img {
+    border: 3px solid #232BC9;
+  }
+  </style>
+
+  <script type="text/javascript">
+    //runs the script before the page loads
+    $(document).ready(function() {
+
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Week 4-2</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../index.html">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 1<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="..\wk1\wk1.html">Week 1 Page</a></li>
+              <ul><a href="..\wk1\sample1-1.html">Sample 1-1</a></ul>
+              <ul><a href="..\wk1\sample1-2.html">Sample 1-2</a></ul>
+              <ul><a href="..\wk1\sample1-3.html">Sample 1-3</a></ul>
+              <ul><a href="..\wk1\sample1-4.html">Sample 1-4</a></ul>
+              <ul><a href="..\wk1\sample1-5.html">Sample 1-5</a></ul>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 2<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="..\wk2\wk2.html">Week 2 Page</a></li>
+              <ul><a href="..\wk2\wk2-1.html">Sample 2-1</a></ul>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Week 3<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="..\wk3\wk3.html">Week 3 Page</a></li>
+              <ul><a href="..\wk3\sample3-1.html">Sample 3-1</a></ul>
+              <ul><a href="..\wk3\sample3-2.html">Sample 3-2</a></ul>
+            </ul>
+          </li>
+          <li><a href="../wk3/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- hidden div for preloading images -->
+  <div id="images" style="display:none;">
+    <img src="../images/splitpie.png">
+    <img src="../images/splitpie_thumb.png">
+    <img src="../images/gradpops.png">
+    <img src="../images/gradpops_thumb.png">
+    <img src="../images/preserves.png">
+    <img src="../images/preserves_thumb.png">
+    <img src="../images/sammiches.png">
+    <img src="../images/sammiches_thumb.png">
+    <img src="../images/scotchcookies.png">
+    <img src="../images/scotchcookies_thumb.png">
+  </div>
+
+<!-- slideshow with jquery cycle2 -->
+  <div class="container-fluid bg-1">
+    <h3>A few of my favorite snaps from my visit to <br> The Broad Museum, Downtown LA</h3><br>
+    <p>Anytime I'm running dry on inspiration, I normally look toward museums to reinvigorate my creativity.</p>
+    <div class="container-fluid cycle-slideshow" data-cycle-speed="1000">
+      <img src="../images/chasethecat.png" alt="Why Must I Chase the Cat">
+      <img src="../images/shinyanimals.png" alt="Shiny Balloon Dog and Bunny">
+      <img src="../images/bigtable.png" alt="Giant Table and Chairs">
+    </div>
+
+    <div id="thumbnails">
+      <a href="../images/chasethecat.png" title="Why Must I Chase the Cat"><img src="../images/chasethecat_thumb.png" alt="Why Must I Chase the Cat"></a>
+      <a href="../images/shinyanimals.png" title="Shiny Balloon Dog and Bunny"><img src="../images/shinyanimals_thumb.png" alt="Shiny Balloon Dog and Bunny"></a>
+      <a href="../images/bigtable.png" title="Giant Table and Chairs"><img src="../images/bigtable_thumb.png" alt="Giant Table and Chairs"></a>
+    </div>
+  </div>
+
+<!-- photo gallery with lightbox2 -->
+  <div class="container-fluid bg-2">
+    <h3>Another shameless plug for my girlfriend's bakery business!</h3>
+    <a href="https://www.instagram.com/sweet_jems_bakery_/?hl=en">Sweet Jems Bakery</a>
+    <div class="container-fluid" id="thumbnails">
+      <a href="../images/splitpie.png" data-lightbox="pics" title="Stonefruit Pie" alt="Stonefruit Pie"><img src="../images/splitpie_thumb.png" alt="Stonefruit Pie" height="200px"></a>
+      <a href="../images/scotchcookies.png" data-lightbox="pics" title="Scotch & Chocolate Chip Cookies" alt="Scotch & Chocolate Chip Cookie"><img src="../images/scotchcookies_thumb.png" alt="Scotch & Chocolate Chip Cookie" height="200px"></a>
+      <a href="../images/sammiches.png" data-lightbox="pics" title="Patriotic Cream Puffs" alt="Patriotic Cream Puffs"><img src="../images/sammiches_thumb.png" alt="Patriotic Cream Puffs" height="200px"></a>
+      <a href="../images/gradpops.png" data-lightbox="pics" title="Graduation Pops" alt="Graduation Pops"><img src="../images/gradpops_thumb.png" alt="Graduation Pops" height="200px"></a>
+      <a href="../images/preserves.png" data-lightbox="pics" title="Stonefruit Preserves with Cake on the Bottom" alt="Stonefruit Preserves"><img src="../images/preserves_thumb.png" alt="Stonefruit Preserves" height="200px"></a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-3 text-center">
+    <img src="../images/powerup.png" alt="power.up logo" align=right width="50"><br><br>
+    <p class="smallfont" align=right>created by power.up!</p>
+  </footer>
+
+</body>
+</html>

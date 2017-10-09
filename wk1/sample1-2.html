@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Sample 1-2</title>
+<style type="text/css">
+body {
+	font-family:Helvetica, sans-serif;
+}
+
+.altStyle {
+	font-family:Verdana, Geneva, sans-serif;
+	background-color:#000;
+	color:#FFF;
+}
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready( function() {
+		$("#btnChangeColors").click( function() {
+			$('body').toggleClass('altStyle');
+	});
+	});
+
+</script>
+
+</head>
+<body>
+<h2>Welcome to IMD312</h2>
+<p>IMD312: Introduction to Programming will teach you the fundamentals of JavaScript. </p>
+<input type="button" id="btnChangeColors" name="btnChangeColors" value="Change Colors"/>
+</body>
+</html>

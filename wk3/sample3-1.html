@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Sample 3-1</title>
+<style type="text/css">
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:90%;
+}
+
+h1 {
+	border-bottom: solid 3px #009;
+	padding-bottom:5px;
+}
+
+.headline {
+	text-transform:uppercase;
+}
+
+.container {
+	width:980px;
+	margin: 0 auto;
+	background-color:#eee;
+	border: solid 2px #666;
+	padding:10px;
+}
+
+.lists {
+	list-style-type:none;
+}
+
+.lists li {
+	display:block;
+	width:15em;
+	font-size:.8em;
+	text-align:center;
+	border: 1px solid #009;
+	background:#009;
+	color: #eee;
+	padding: .25em;
+	margin: 0 0 .25em 0;
+}
+
+.lists li a {
+	text-decoration:none;
+	color: #eee;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("h1").addClass("headline"); // changes all h1 styles
+		$("#container").addClass("container");
+		$(".tutorials").css("width", "400px");
+		$(".tutorials h3").css("border-bottom", "2px solid #009");
+	});
+	//end document ready
+</script>
+
+</head>
+<body>
+<div id="container">
+  <h1>jQuery</h1>
+
+        <div id="references">
+            <h3>jQuery References</h3>
+            <ul>
+                <li><a href="http://www.jquery.com/">http://www.jquery.com</a></li>
+                <li><a href="http://www.jqueryui.com/">http://www.jqueryui.com</a></li>
+            </ul>
+        </div>
+
+        <div class="tutorials">
+        	<h3>jQuery Tutorials</h3>
+            <ul>
+            	<li><a href="http://www.w3schools.com/jquery/default.asp">W3Schools.com</a></li>
+                <li><a href="http://docs.jquery.com/Tutorials:Getting_Started_with_jQuery">Getting Started with jQuery</a></li>
+            </ul>
+        </div>
+
+</div>
+
+<p>
+</body>
+</html>

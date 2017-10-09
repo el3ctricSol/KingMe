@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+	<title>Sample 3-3</title>
+
+<style type="text/css">
+body {
+		font: 20px Montserrat, sans-serif;
+		line-height: 1.8;
+		color: #f5f6f7;
+}
+
+h1 {
+	padding-bottom:50px;
+	text-shadow: 2px 2px 2px #337BE5;
+	color: #48c939;
+	text-align: center;
+}
+
+h3 {
+	cursor:pointer;
+}
+
+img {
+	display: inline-block;
+  margin: auto;
+}
+
+.answer {
+	color: #ffffff;
+	font-size: 20px;
+	line-height: 1.2;
+}
+#bluefont {
+  color: blue;
+}
+.bg-3 {
+		background-color: #2f2f2f; /* Black Gray */
+		padding-right: 20px !important;
+		color: #48c939;            /*bright green*/
+}
+
+.bodytext {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size:100%;
+}
+
+.centerpic {
+	text-align: center;
+}
+
+#container {
+	margin: 0 auto;
+	background-color: #2A87BC;
+	border: solid 2px #666;
+	padding:10px;
+	color: #ffffff;
+}
+
+.navbar-nav li a {
+	color: #48c939 !important;
+}
+.navbar-brand {
+	color: #48c939 !important;
+}
+.navbar-default {
+  min-height: 60px;  /*navbar height */
+}
+.navbar {
+		border: 0;
+		border-radius: 0;
+		margin-bottom: 0;
+		font-size: 15px;
+		background-color: #2f2f2f !important;
+}
+.navbar-default {
+	min-height: 60px;  /*navbar height */
+}
+.navbar-nav  li a:hover {
+		color: #000000 !important;
+}
+.smallfont {
+	font-size: 12px;
+}
+
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".answer").hide();   //hides anything classed 'answer'
+		$("#container h3").click(function() {
+			$(this).next(".answer").slideToggle(); 	//selects answer right after clicked question
+		});		//ends click action
+		$("h1").replaceWith("<h1>power.up's FAQ Board</h1>")
+	});
+	//end document ready
+</script>
+</head>
+
+<body>
+
+	<!-- Navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">FAQ</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Assignments<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="..\wk1\wk1.html">Week 1 Page</a></li>
+              <li><a href="..\wk2\wk2.html">Week 2 Page</a></li>
+              <li><a href="..\wk3\wk3.html">Week 3 Page</a></li>
+              <li><a href="..\wk4\wk4.html">Week 4 Page</a></li>
+            </ul>
+          </li>
+          <li><a href="../wk5/quote.html"><span id="bluefont">Design Quote!</span></a></li>
+          <li><a href="../wk5/sample5-1.html">Newsletter</a></li>
+          <li><a href="wk3/faq.html">FAQ</a></li>
+        </ul>
+      </div> <!--collapsable navbar parts -->
+     </div>  <!--container -->
+  </nav>
+
+<div class="bodytext" id="container">
+    <h1>jQuery Frequently Asked Questions</h1>
+
+    <h3>How long have you been coding?</h3>
+    <div class="answer">
+				I've only seriously been coding for 8 months, however my first foray into coding was around 2007 when MySpace was at its peak. I not only designed my own page, but would also design friends' pages. MySpace's HTML code was simplified, but I was able to learn how to add background color, background music, and picture placement through MySpace.
+    </div>
+
+    <h3>Do you make mobile-responsive websites?</h3>
+    <div class="answer">
+			I do! I completed this project <a href="http://thepastrydojo.com">(The Pastry Dojo)</a> for my Intermediate Web Design course during Spring 2017. It is fully viewable and operable on desktop, tablet, or mobile.
+    </div>
+
+		<h3>Do you also make logos?</h3>
+    <div class="answer">
+			I do indeed make logos as well. Here is my favorite example - a blues band wanted a logo that looked like it belonged on the nameplate of a classic hot rod. The first picture shows what the client was looking for - red lettering with yellow outline, the word 'band' made with musical notes, and the whole logo having a chrome shine to it. The second picture is what I created for the band, and they loved it. <br><br>
+			<div class="centerpic">
+				<img src="..\images\marshall_ tyler_band1.png" alt="Marshall Tyler Band 1" width="350px">
+				<img src="..\images\marshall_ tyler_band2.jpg" alt="Marshall Tyler Band 2" width="350px">
+			</div>
+    </div>
+
+    <h3>What is your biggest childhood regret?</h3>
+    <div class="answer">
+			My biggest childhood regret is never having climbed the AggroCrag from the Nickelodeon game show, "Guts." I once promised to never ask for another Christmas present again in my life if Santa could get me a shot on that show. Look at that mountain. <b>LOOK AT THAT TROPHY</b>. <br><br>
+			<div class="centerpic">
+				<img src="../images/aggrocrag.jpg" alt="The AggroCrag" height="256px">
+				<img src="../images/aggrocragtrophy.jpg" alt="The AggroCrag Trophy" height="256px">
+			</div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-3 text-center">
+  <img src="../images/powerup.png" alt="power.up logo" align=right width="50"> <br><br>
+  <p class="smallfont" align=right>created by power.up!</p>
+  <p class="smallfont" align=right>&copy 2017</p>
+</footer>
+
+</body>
+</html>

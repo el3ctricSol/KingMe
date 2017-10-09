@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+<title>Newsletter</title>
+
+<style type="text/css">
+p {font-size: 16px;}
+.margin {margin-bottom: 20px}
+.pmargin {margin-left: 50px; margin-right: 50px}
+#bluefont {
+	color: blue;
+}
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:90%;
+}
+
+h1 {
+color: #ffffff;
+	border-bottom: solid 3px #fff;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	text-shadow: 2px 2px 2px black;
+}
+
+h3 {
+	cursor:pointer;
+}
+
+p {
+	font-size: 20px;
+}
+#container {
+	width:90%;
+	height: auto;
+	margin: 0 auto;
+	background-color:#2A87BC;
+	border: solid 2px #ffffff;
+	padding:10px;
+}
+
+.inputFocus {
+      border: 4px solid orange; //highlights area in use
+}
+
+.label {
+	float:left;
+	width:220px;
+	text-align:right;
+	clear:left;
+	margin-right:15px;
+	font-weight:bold;
+}
+
+#submit {
+	margin-left:235px;
+}
+.navbar-nav li a {
+	color: #48c939 !important;
+}
+.navbar-brand {
+	color: #48c939 !important;
+}
+.navbar {
+		border: 0;
+		border-radius: 0;
+		margin-bottom: 0;
+		font-size: 14px;
+		background-color: #2f2f2f !important;
+}
+.navbar-default {
+	min-height: 60px;  /*navbar height */
+}
+.navbar-nav  li a:hover {
+		color: #000000 !important;
+}
+</style>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#other').hide(); // hides 'other' from the start
+	$('#register').validate();
+	$('input[type=text]').focus(function() {
+	      $(this).addClass('inputFocus');
+	});
+	$('#first_name').focus();
+
+ //puts focus on 'first name'
+
+	$('#register').submit(function() {
+    if ($('#first_name').val() == "") {
+         alert('Please enter your first name');
+         return false;
+                  }
+     }); //ensures first name is entered
+
+		 $('#register').submit(function() {
+	     if ($('#last_name').val() == "") {
+	          alert('Please enter your last name');
+	          return false;
+	                   }
+	      }); //ensures last name is entered
+
+				$('#register').submit(function() {
+	 	     if ($('#email').val() == "") {
+	 	          alert('Please enter a valid email address');
+	 	          return false;
+	 	                   }
+	 	      }); //ensures last name is entered
+
+					$('#register').submit(function() {
+						if ($('#comments').val() == "") {
+								 alert('Your comments are greatly appreciated! Please provide feedback.');
+								 return false;
+													}
+						 }); //ensures last name is entered
+
+		 $('input[type=text]').focus(function() {
+           $(this).addClass('inputFocus');
+     }); //function for the 'focus' class
+		 $('input[type=text]').blur(function() {
+          $(this).removeClass('inputFocus');
+     }); //function to remove focus after entry
+		 $('#relationship').change(function() {
+      if($(this).val()=='null'){
+           alert('Please choose a relationship option');
+      }
+}); //nullifies 'select one' option and alerts
+
+$('#refer').change(function() {
+ if($(this).val()=='null'){
+			alert('Please choose a referral option');
+ }
+}); //nullifies 'select one' option and alerts
+
+$('#relationship').change(function() {
+           if($(this).val() == 'Single'){
+                $('#spouse_name').attr('disabled', true);
+           } else {
+                $('#spouse_name').attr('disabled', false);
+           }
+      }); //for disabling values that aren't needed, based on choice
+
+$('#refer').change(function() {
+           if($(this).val() != 'Other'){
+                $('#other').hide();
+           } else {
+                $('#other').show();
+           }
+      });	//shows 'Other' once clicked
+
+}); //END ready
+</script>
+
+</head>
+
+<body>
+	<!-- Navbar -->
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Newsletter</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Assignments<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="..\wk1\wk1.html">Week 1 Page</a></li>
+							<li><a href="..\wk2\wk2.html">Week 2 Page</a></li>
+							<li><a href="..\wk3\wk3.html">Week 3 Page</a></li>
+							<li><a href="..\wk4\wk4.html">Week 4 Page</a></li>
+						</ul>
+					</li>
+					<li><a href="../wk5/quote.html"><span id="bluefont">Design Quote!</span></a></li>
+					<li><a href="../wk5/sample5-1.html">Newsletter</a></li>
+					<li><a href="../wk3/faq.html">FAQ</a></li>
+				</ul>
+			</div> <!--collapsable navbar parts -->
+		 </div>  <!--container -->
+	</nav>
+<div id="container">
+    <h1>Contact Us!</h1>
+
+   <form action="" method="post" name="register" id="register">
+        <p>
+            <label for="first_name" class="label">First Name:</label>
+            <input type="text" name="first_name" id="first_name" class="required" />
+        </p>
+        <p>
+            <label for="last_name" class="label">Last Name:</label>
+            <input type="text" name="last_name" id="last_name" class="required"/>
+
+        </p>
+        <p>
+
+             <label for="relationship" class="label">Marital Status? </label>
+             <select name="relationship" id="relationship">
+              <option value="null">Select One</option>
+              <option value="Single">Single</option>
+              <option value="Married">Married</option>
+
+            </select>
+        </p>
+        <p>
+            <label for="spouse_name" class="label">Spouse Name:</label>
+            <input type="text" name="spouse_name" id="spouse_name" />
+        </p>
+        <p>
+            <label for="refer" class="label">Where did you hear about us? </label>
+
+            <select name="refer" id="refer">
+              <option value="null">Select One</option>
+              <option value="Google">Google</option>
+              <option value="Friend">Friend</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Newspaper">Newspaper Ad</option>
+              <option value="Other">Other</option>
+            </select>
+        </p>
+        <p id="other">
+            <label for="referOther" class="label">Other </label>
+            <input type="text" name="referOther" id="referOther"/>
+        </p>
+
+				<p>
+						<label for="email" class="label">Email address:</label>
+						<input type="text" name="email" id="email" class="required"/>
+				</p>
+
+				<p>
+            <label for="comments" class="label">Any additional comments? </label>
+            <textarea name="comments" rows="5" id="comments" class="required"></textarea>
+        </p>
+        <p>
+            <input type="submit" name="submit" id="submit" value="Register" />
+        </p>
+    </form>
+</div>
+<p>
+	
+</body>
+</html>
